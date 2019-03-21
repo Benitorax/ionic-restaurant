@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Orders</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal" (click)="navcart()">
+                <ion-icon name="cart"></ion-icon>
+                <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content [ngClass]="{bg:!isOrders()}">
+    <div *ngIf="!isOrders() ">
+        <ion-row>
+            <ion-icon class="empty-cart" name="timer" item-left></ion-icon>
+        </ion-row>
+        <h4>No Orders</h4>
+    </div>
+    <div *ngIf="isOrders()">
+        <ion-list class="orders-list">
+            <ion-card class="orders-item">
+                <ion-row *ngFor="let order of ordersDetails">
+                    <ion-row *ngFor="let item of order.cart ; let i =index ">
+                        <ion-col col-4>
+                            <img src="{{item.item.thumb}}" alt="">
+                        </ion-col>
+                        <ion-col col-5>
+                            <p class="item-name"><strong>{{item.item.title}}</strong></p>
+                            <p class="item-price">${{item.item.price.value}}</p>
+                            <p class="date">{{order.createdAt|date}}</p>
+                        </ion-col>
+                        <ion-col col-3>
+                            <button class="btn-view" ion-button color="primary" (click)="orderDetails(order.$key,i)">
+                                View
+                            </button>
+                            <button class="btn-view" ion-button color="primary" (click)="orderStatus(order.$key)">
+                                Order Status
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-row>
+            </ion-card>
+        </ion-list>
+    </div>
+</ion-content>

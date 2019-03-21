@@ -1,0 +1,117 @@
+{
+    "name": "ionic-hello-world",
+    "author": "Ionic Framework",
+    "homepage": "http://ionicframework.com/",
+    "private": true,
+    "scripts": {
+        "clean": "ionic-app-scripts clean",
+        "build": "ionic-app-scripts build",
+        "ionic:build": "ionic-app-scripts build",
+        "ionic:serve": "ionic-app-scripts serve"
+    },
+    "dependencies": {
+        "@angular/common": "4.4.3",
+        "@angular/compiler": "4.4.3",
+        "@angular/compiler-cli": "4.4.3",
+        "@angular/core": "4.4.3",
+        "@angular/forms": "4.4.3",
+        "@angular/http": "4.4.3",
+        "@angular/platform-browser": "4.4.3",
+        "@angular/platform-browser-dynamic": "4.4.3",
+        "@ionic-native/call-number": "3.12.1",
+        "@ionic-native/core": "3.12.1",
+        "@ionic-native/email-composer": "3.12.1",
+        "@ionic-native/facebook": "3.12.1",
+        "@ionic-native/google-plus": "3.12.1",
+        "@ionic-native/onesignal": "3.12.1",
+        "@ionic-native/paypal": "4.1.0",
+        "@ionic-native/social-sharing": "3.12.1",
+        "@ionic-native/splash-screen": "3.12.1",
+        "@ionic-native/status-bar": "3.12.1",
+        "@ionic-native/stripe": "4.1.0",
+        "@ionic-native/twitter-connect": "3.12.1",
+        "@ionic/storage": "2.0.1",
+        "angular2-google-maps": "0.17.0",
+        "angular2-moment": "1.6.0",
+        "angularfire2": "4.0.0-rc0",
+        "cordova-android": "6.2.3",
+        "cordova-ios": "4.4.0",
+        "es6-promise-plugin": "4.1.0",
+        "firebase": "4.1.3",
+        "ionic-plugin-keyboard": "2.2.1",
+        "ionic2-rating": "1.2.2",
+        "ionicons": "3.0.0",
+        "ng2-cordova-oauth": "0.0.8",
+        "ng2-translate": "5.0.0",
+        "ng2-validation": "3.1.3",
+        "promise-polyfill": "6.0.2",
+        "rxjs": "5.4.3",
+        "ionic-angular": "3.7.1",
+        "zone.js": "0.8.18",
+        "com.paypal.cordova.mobilesdk": "^3.5.0",
+        "cordova-plugin-console": "^1.0.7",
+        "cordova-plugin-device": "^1.1.6",
+        "cordova-plugin-email": "^1.2.6",
+        "cordova-plugin-facebook4": "^1.9.1",
+        "cordova-plugin-googleplus": "^5.1.1",
+        "cordova-plugin-inappbrowser": "^1.7.1",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-statusbar": "^2.2.3",
+        "cordova-plugin-stripe": "^1.5.3",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "cordova-plugin-x-socialsharing": "^5.1.8",
+        "onesignal-cordova-plugin": "^2.1.2",
+        "twitter-connect-plugin": "^0.6.0"
+    },
+    "devDependencies": {
+        "@angular/cli": "1.3.0",
+        "@ionic/app-scripts": "3.0.0",
+        "ionic": "3.18.0",
+        "typescript": "2.3.4"
+    },
+    "cordovaPlugins": [
+        "cordova-plugin-whitelist",
+        "cordova-plugin-console",
+        "cordova-plugin-statusbar",
+        "cordova-plugin-device",
+        "ionic-plugin-keyboard",
+        "cordova-plugin-splashscreen",
+        "onesignal-cordova-plugin",
+        {
+            "locator": "https://github.com/Rohfosho/CordovaCallNumberPlugin.git",
+            "id": "call-number"
+        }
+    ],
+    "description": "RestaurentV2: An Ionic project",
+    "cordova": {
+        "platforms": [
+            "android",
+            "ios"
+        ],
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-email": {},
+            "cordova-plugin-facebook4": {
+                "APP_ID": "1886232221665206",
+                "APP_NAME": "ionic3firebaseApp"
+            },
+            "cordova-plugin-googleplus": {
+                "REVERSED_CLIENT_ID": "RestaurentV3"
+            },
+            "cordova-plugin-inappbrowser": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-x-socialsharing": {},
+            "ionic-plugin-keyboard": {},
+            "mx.ferreyra.callnumber": {},
+            "onesignal-cordova-plugin": {},
+            "twitter-connect-plugin": {
+                "FABRIC_KEY": "c85e4cff3836038742faae187f364ea33d94cbed"
+            },
+            "com.paypal.cordova.mobilesdk": {},
+            "cordova-plugin-stripe": {}
+        }
+    }
+}

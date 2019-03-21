@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title class="title">Delivery Options
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <!--amount calculation-->
+    <ion-row class="amount-block">
+        <ion-col col-6>
+            <p class="total"> Order Total: <span
+                    class="currency"> &#8377; {{orderDetails.grandTotal | number:'.2-2'}}</span></p>
+        </ion-col>
+    </ion-row>
+    <!--pick up/delivery option-->
+
+    <div>
+        <ion-list radio-group class="size-list">
+            <!--New  Address-->
+            <ion-item class="add" (click)="addAddress()">Add New Address
+                <ion-icon name="add"></ion-icon>
+            </ion-item>
+        </ion-list>
+        <!--saved address list-->
+        <ion-list radio-group class="address-radio">
+            <ion-item *ngFor="let address of addressList">
+                <ion-label>
+                    <p class="show-address">{{address.name}} </p>
+                    <p class="show-address">{{address.address}}</p>
+                    <p class="show-address">{{address.city}}</p>
+                    <p class="show-address">{{address.pincode}}</p>
+                </ion-label>
+                <ion-radio (ionSelect)="selectAddress(address.$key,address)"></ion-radio>
+            </ion-item>
+        </ion-list>
+        <button ion-button block class="continue-btn" (click)="checkOut()">Continue &nbsp;<ion-icon
+                name="arrow-forward"></ion-icon>
+        </button>
+    </div>
+</ion-content>
+
+

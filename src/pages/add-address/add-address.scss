@@ -1,0 +1,72 @@
+page-add-address {
+  .content {
+    background-image: url(../assets/img/address-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  ::-webkit-input-placeholder {
+    color: $white !important;
+    font-weight: 100;
+  }
+  .full-address {
+    background-color: rgba(0, 0, 0, 0.2);
+    .label {
+      color: $white;
+    }
+  }
+  .list .item-block .item-inner {
+    border: 0 !important;
+  }
+  .add-heading {
+    color: $white;
+    text-align: center;
+    margin: 1.5em 0;
+    font-size: 1.8rem;
+  }
+
+  .list .item-input:last-child {
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .text-input {
+    color: $white !important;
+  }
+  .date-label {
+    color: $white !important;
+  }
+
+  .no-padd {
+    padding: 0px
+  }
+
+  .item {
+    color: $white;
+    background-color: transparent;
+    height: 66px;
+    border-bottom: 1px solid;
+    border-color: rgba(256, 256, 256, 0.1);
+  }
+  .city {
+    padding-left: 22px;
+  }
+  .address-textarea {
+    height: auto !important;
+  }
+  .payment-block {
+    margin-bottom: 0px
+  }
+  .list {
+    width: 100%;
+  }
+  .button {
+    height: 44px;
+    font-size: 1.6rem;
+    border-radius: 0;
+    background-color: $primary;
+    width: 95%;
+    display: block;
+    margin: 1em auto;
+
+  }
+}
